@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Avaliação</h1>
+        <div id="formulario">
+            <div class="pergunta" data-pergunta-id="1">
+                <h2>Quão satisfeito você está com o atendimento?</h2>
+                <div class="escala">
+                    <button class="valor" data-valor="0">0</button>
+                    <button class="valor" data-valor="1">1</button>
+                    <button class="valor" data-valor="2">2</button>
+                    <button class="valor" data-valor="3">3</button>
+                    <button class="valor" data-valor="4">4</button>
+                    <button class="valor" data-valor="5">5</button>
+                    <button class="valor" data-valor="6">6</button>
+                    <button class="valor" data-valor="7">7</button>
+                    <button class="valor" data-valor="8">8</button>
+                    <button class="valor" data-valor="9">9</button>
+                    <button class="valor" data-valor="10">10</button>
+                </div>
+            </div>
+            <div class="pergunta" data-pergunta-id="2" style="display: none;">
+                <h2>Quão provável é recomendar nosso serviço a outras pessoas?</h2>
+                <div class="escala">
+                    <button class="valor" data-valor="0">0</button>
+                    <button class="valor" data-valor="1">1</button>
+                    <button class="valor" data-valor="2">2</button>
+                    <button class="valor" data-valor="3">3</button>
+                    <button class="valor" data-valor="4">4</button>
+                    <button class="valor" data-valor="5">5</button>
+                    <button class="valor" data-valor="6">6</button>
+                    <button class="valor" data-valor="7">7</button>
+                    <button class="valor" data-valor="8">8</button>
+                    <button class="valor" data-valor="9">9</button>
+                    <button class="valor" data-valor="10">10</button>
+                </div>
+            </div>
+            <textarea id="comentario" placeholder="Deixe um comentário adicional (opcional)"></textarea>
+            <div class="botoes">
+                <button id="botao-anterior" disabled>Anterior</button>
+                <button id="botao-proximo">Próxima</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

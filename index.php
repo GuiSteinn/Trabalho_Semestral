@@ -1,24 +1,30 @@
-<?php
-require_once "FormularioControlador.php";
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Sistema de Feedback</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Sistema de Feedback</h1>
+        <nav>
+            <a href="formulario.php">Responder Formulário</a> <!-- Link para o formulário -->
+            <a href="avaliacoes.php">Ver Avaliações</a> <!-- Link para página de avaliações -->
+            <a href="dashboard.php">Painel Administrativo</a> <!-- Link para o painel -->
+        </nav>
+    </header>
 
-$controlador = new FormularioControlador();
+    <main>
+        <section>
+            <h2>Sobre o Sistema</h2>
+            <p>Utilize o menu acima para navegar entre as opções do sistema.</p>
+        </section>
+    </main>
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dados = [
-        'id_setor' => $_POST['id_setor'],
-        'id_pergunta' => $_POST['id_pergunta'],
-        'id_dispositivo' => $_POST['id_dispositivo'],
-        'resposta' => $_POST['resposta'],
-        'texto_feedback' => $_POST['texto_feedback'] ?? null
-    ];
-
-    if ($controlador->enviarFeedback($dados)) {
-        header("Location: /obrigado.php");
-        exit;
-    } else {
-        echo "Erro ao salvar sua avaliação.";
-    }
-} else {
-    $perguntas = $controlador->obterPerguntas();
-    include "formulario.php";
-}
+    <footer>
+        <p>&copy; 2024 Trabalho Semestral</p>
+    </footer>
+</body>
+</html>

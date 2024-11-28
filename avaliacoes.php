@@ -1,5 +1,5 @@
 <?php
-require 'conexao.php';
+require 'banco_de_dados.php';
 $sql = "SELECT setores.nome AS setor, perguntas.texto AS pergunta, 
         avaliacoes.resposta, avaliacoes.data_hora
         FROM avaliacoes

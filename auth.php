@@ -1,11 +1,10 @@
 <?php
 session_start();
-require 'conexao.php';
+require 'banco_de_dados.php';
 
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$usuario = $_POST['postgres'];
+$senha = $_POST['postgres'];
 
-// Busca no banco de dados
 $sql = "SELECT * FROM usuarios WHERE usuario = $1";
 $result = pg_query_params($conn, $sql, [$usuario]);
 
